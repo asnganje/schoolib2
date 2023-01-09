@@ -25,6 +25,10 @@ class Person
     def can_use_services?
         is_of_age? || @parent_permission
     end
+
+    def add_rental(person, date)
+        Rental.new(person, date, self)
+    end
 end
 
 person = Person.new(22, 'maximilianus')
